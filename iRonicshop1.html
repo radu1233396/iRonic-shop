@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>iRonic Shop - Web Store</title>
+    <meta name="description" content="iRonic Shop - Vinde iteme Grow a Garden, Pet Simulator 99 și Robux. Plată cu Paysafe, PayPal, Skrill, Revolut, Litecoin. 400+ proof!">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #181818;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .ironic-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .ironic-word {
+            position: absolute;
+            font-size: 5vw;
+            font-weight: bold;
+            color: #00eaff;
+            opacity: 0.10;
+            user-select: none;
+            transition: transform 0.2s cubic-bezier(.4,1.7,.6,.97);
+            will-change: transform;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: rgba(24,24,24,0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #0008;
+            padding: 36px 28px 24px 28px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            color: #00eaff;
+            margin-top: 0;
+            text-align: center;
+        }
+        .section-title {
+            color: #00eaff;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+        .shop-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+        }
+        .shop-table th, .shop-table td {
+            padding: 10px 8px;
+            text-align: left;
+        }
+        .shop-table th {
+            background: #232323;
+            color: #00eaff;
+            font-weight: bold;
+        }
+        .shop-table tr:nth-child(even) {
+            background: #232323;
+        }
+        .shop-table tr:nth-child(odd) {
+            background: #181818;
+        }
+        .payment-methods {
+            margin: 24px 0 10px 0;
+            text-align: center;
+        }
+        .payment-methods span {
+            display: inline-block;
+            background: #232323;
+            color: #00eaff;
+            border-radius: 8px;
+            padding: 8px 16px;
+            margin: 4px 6px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .about-section {
+            margin-top: 40px;
+            background: #232323;
+            border-radius: 12px;
+            padding: 24px 18px;
+            text-align: center;
+            color: #fff;
+        }
+        .about-section h2 {
+            color: #00eaff;
+            margin-top: 0;
+        }
+        .scroll-ironic {
+            position: fixed;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 0);
+            font-size: 4vw;
+            font-weight: bold;
+            color: #00eaff;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 10;
+            transition: top 0.7s cubic-bezier(.4,1.7,.6,.97);
+            user-select: none;
+        }
+        .scroll-ironic.visible {
+            top: 10%;
+            transition: top 0.7s cubic-bezier(.4,1.7,.6,.97);
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 12px 2vw;
+            }
+            .shop-table th, .shop-table td {
+                padding: 7px 2px;
+                font-size: 0.98em;
+            }
+            .scroll-ironic {
+                font-size: 8vw;
+            }
+            .ironic-word {
+                font-size: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ironic-bg" id="ironicBg">
+        <div class="ironic-word" style="top:12%;left:10%;">iRonic</div>
+        <div class="ironic-word" style="top:30%;left:60%;">iRonic</div>
+        <div class="ironic-word" style="top:55%;left:25%;">iRonic</div>
+        <div class="ironic-word" style="top:70%;left:70%;">iRonic</div>
+        <div class="ironic-word" style="top:80%;left:40%;">iRonic</div>
+    </div>
+    <div class="scroll-ironic" id="scrollIronic">iRonic</div>
+    <div class="container">
+        <h1>iRonic Shop</h1>
+        <div class="section-title">Grow a Garden</div>
+        <table class="shop-table">
+            <tr><th>Produs</th><th>Preț</th></tr>
+            <tr><td>Raccoon / Dragonfly</td><td>5€</td></tr>
+            <tr><td>Chicken Zombie</td><td>1.5€</td></tr>
+            <tr><td>Red Fox</td><td>2.5€</td></tr>
+            <tr><td>3T Sheckles</td><td>5€</td></tr>
+        </table>
+        <div class="section-title">Pet Simulator 99</div>
+        <table class="shop-table">
+            <tr><th>Produs</th><th>Preț</th></tr>
+            <tr><td>7.7b-9b Titanic</td><td>20€</td></tr>
+            <tr><td>Flex Cat</td><td>35€</td></tr>
+            <tr><td>Blue Balloon Cat</td><td>45€</td></tr>
+        </table>
+        <div class="section-title">Robux</div>
+        <table class="shop-table">
+            <tr><th>Robux</th><th>Preț</th></tr>
+            <tr><td>1.000</td><td>7€</td></tr>
+            <tr><td>2.000</td><td>14€</td></tr>
+            <tr><td>5.000</td><td>34€</td></tr>
+            <tr><td>10.000</td><td>67€</td></tr>
+            <tr><td>20.000</td><td>132€</td></tr>
+            <tr><td>30.000</td><td>197€</td></tr>
+            <tr><td>40.000</td><td>260€</td></tr>
+            <tr><td>50.000</td><td>320€</td></tr>
+        </table>
+        <div class="payment-methods">
+            <span>Paysafe</span>
+            <span>PayPal</span>
+            <span>Skrill</span>
+            <span>Revolut</span>
+            <span>Litecoin</span>
+        </div>
+        <div class="about-section">
+            <h2>Despre noi</h2>
+            <p>Suntem de încredere și avem peste <b>400 proof+</b>! Oferim tranzacții sigure și rapide pentru toți clienții noștri.</p>
+        </div>
+    </div>
+    <script>
+        // Face iRonic-urile să se miște după cursor
+        const ironicWords = document.querySelectorAll('.ironic-word');
+        document.addEventListener('mousemove', function(e) {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            const x = (e.clientX - w/2) / (w/2);
+            const y = (e.clientY - h/2) / (h/2);
+            ironicWords.forEach((el, i) => {
+                const factor = 20 + i * 12;
+                el.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+            });
+        });
+        document.addEventListener('mouseleave', function() {
+            ironicWords.forEach((el) => {
+                el.style.transform = `translate(0,0)`;
+            });
+        });
+
+        // Afișează textul iRonic când dai scroll în jos
+        const scrollIronic = document.getElementById('scrollIronic');
+        window.addEventListener('scroll', function() {
+            if(window.scrollY > 100) {
+                scrollIronic.classList.add('visible');
+            } else {
+                scrollIronic.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
